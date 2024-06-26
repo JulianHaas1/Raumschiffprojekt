@@ -7,6 +7,7 @@ public class Sonnensystem {
     private static ArrayList<Planet> planeten = new ArrayList<>();
     public static ArrayList<Asteroidenfeld> asteroidenfelder = new ArrayList<>();
     public static ArrayList<GegnerischesRaumschiff> GegnerischesRaumschiff = new ArrayList<>();
+    public static ArrayList<GalaxieObjekte> GalaxieObjekte = new ArrayList<>();
 
     public static ArrayList<Raumschiff> getRaumschiffe() {
         return raumschiffe;
@@ -22,6 +23,10 @@ public class Sonnensystem {
 
     public static ArrayList<GegnerischesRaumschiff> getGegnerischeRaumschiffe() {
         return GegnerischesRaumschiff;
+    }
+
+    public static ArrayList<GalaxieObjekte> getGalaxieObjekte() {
+        return GalaxieObjekte;
     }
 
     public static void addRaumschiff(Raumschiff raumschiff) {

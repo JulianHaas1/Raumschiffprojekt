@@ -34,6 +34,7 @@ public class Raumschiff {
         return name;
     }
 
+
     public void setkapitaen(Kapitaen kapitaen) {
         this.kapitaen = kapitaen;
     }
@@ -70,11 +71,12 @@ public class Raumschiff {
         return Waffenstaerke;
     }
 
-    public void setWaffenstaerke() {
-        Waffenstaerke += 5;
+    public void setWaffenstaerke(Gegenstand verbesserung) {
+        this.Waffenstaerke += verbesserung.getFaktor();
+
     }
 
-    public void addVerbesserung(String verbesserung) {
+    public void addVerbesserung(Gegenstand verbesserung) {
         this.verbesserungen.add(verbesserung);
     }
 
@@ -88,6 +90,10 @@ public class Raumschiff {
 
     public void setLebenspunkte(int Lebenspunkte) {
         this.Lebenspunkte = Lebenspunkte;
+    }
+
+    public void berechneWaffenstaerke() {
+        Waffenstaerke = Waffenstaerke + 5;
     }
 
     public void zeigeVerbesserungen() {
@@ -198,6 +204,7 @@ public class Raumschiff {
             System.out.println("Sie haben die Umgebung nicht gescannt.");
         }
     }
+
 }
 
 

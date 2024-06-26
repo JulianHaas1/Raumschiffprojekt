@@ -30,17 +30,13 @@ public class GegnerischesRaumschiff {
         return posY;
     }
 
-    public void hit(int damage) {
+    public void angriff(Raumschiff raumschiff) {
 
         if (Math.random() * 100 < Treffgenauigkeit) {
             System.out.println("Das gegnerische Raumschiff " + this.name + " hat getroffen!");
-            this.lebenspunkte -= damage;
+            raumschiff.hit(this.waffenstaerke);
         } else {
             System.out.println("Das gegnerische Raumschiff " + this.name + " hat verfehlt!");
-        }
-        this.lebenspunkte -= damage;
-        if (this.lebenspunkte <= 0) {
-            System.out.println("Das gegnerische Raumschiff " + this.name + " wurde zerstört!");
         }
     }
 
@@ -54,5 +50,9 @@ public class GegnerischesRaumschiff {
 
     public int getLebenspunkte(){
         return lebenspunkte;
+    }
+
+    public void hit(int damage) {
+        this.lebenspunkte -= damage;
     }
 }

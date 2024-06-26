@@ -16,7 +16,7 @@ public class Endboss {
 
     public Endboss(String name, int armLHealth, int armRHealth, int legRHealth, int legLHealth, int eyeRHealth, int eyeLHealth, int attackDamage, int PosX, int PosY) {
         this.name = name;
-        this.armLHealth = 50; // Example values
+        this.armLHealth = 50;
         this.armRHealth = 50;
         this.legRHealth = 50;
         this.legLHealth = 50;
@@ -29,6 +29,7 @@ public class Endboss {
 
     public void hitArm(int damage) {
         this.armLHealth -= damage;
+        System.out.println("Verbleibende LP: " + this.armLHealth);
         if (this.armLHealth <= 0) {
             System.out.println("Der Arm von " + this.name + " wurde zerstört!");
         }
@@ -36,6 +37,7 @@ public class Endboss {
 
     public void hitRArm(int damage) {
         this.armRHealth -= damage;
+        System.out.println("Verbleibende LP: " + this.armRHealth);
         if (this.armRHealth <= 0) {
             System.out.println("Der Arm von " + this.name + " wurde zerstört!");
         }
@@ -43,6 +45,7 @@ public class Endboss {
 
     public void hitLLeg(int damage) {
         this.legLHealth -= damage;
+        System.out.println("Verbleibende LP: " + this.legLHealth);
         if (this.legLHealth <= 0) {
             System.out.println("Das Bein von " + this.name + " wurde zerstört!");
         }
@@ -50,6 +53,7 @@ public class Endboss {
 
     public void hitRLeg(int damage) {
         this.legRHealth -= damage;
+        System.out.println("Verbleibende LP: " + this.legRHealth);
         if (this.legRHealth <= 0) {
             System.out.println("Das Bein von " + this.name + " wurde zerstört!");
         }
@@ -57,6 +61,7 @@ public class Endboss {
 
     public void hitLEye(int damage) {
         this.eyeLHealth -= damage;
+        System.out.println("Verbleibende LP: " + this.eyeLHealth);
         if (this.eyeLHealth <= 0) {
             System.out.println("Das Auge von " + this.name + " wurde zerstört!");
             int schwachstellenschaden = 20;
@@ -71,6 +76,7 @@ public class Endboss {
 
     public void hitREye(int damage) {
         this.eyeRHealth -= damage;
+        System.out.println("Verbleibende LP: " + this.eyeRHealth);
         if (this.eyeRHealth <= 0) {
             System.out.println("Das Auge von " + this.name + " wurde zerstört!");
         }
@@ -138,6 +144,8 @@ public class Endboss {
     public String getName(){
         return name;
     }
+
+
 
 }
 

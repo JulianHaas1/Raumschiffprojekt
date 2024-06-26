@@ -57,9 +57,10 @@ public class Kapitaen {
 
     public void levelUp() {
         this.erfahrung++;
+        System.out.println(this.name + " hat Erfahrung gesammelt!");
         if (this.erfahrung == 5) {
         System.out.println(this.name + "ist ein Level aufgestiegen!");
-        raumschiff.setWaffenstaerke();
+        raumschiff.setWaffenstaerke(new Gegenstand("Waffenupgrade", 5));
         this.erfahrung = 0;
         }
     }
